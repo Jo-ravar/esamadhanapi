@@ -1,0 +1,11 @@
+{
+  "name": "esamadhan",
+  "version": "1.0.0",
+  "description": "documents anaylsis",
+  "main": "app.js",
+  "scripts": {
+   "start": "node app.js"
+  },
+  "author": "joravar",
+  "license": "ISC"
+}
