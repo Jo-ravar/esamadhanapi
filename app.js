@@ -17,9 +17,12 @@ app.use(passport.initialize());
 
 var indexRoute=require('./src/routes/index');
 var lawyerroute=require('./src/routes/index2');
+var docRoute=require('./src/routes/document');
 
 app.use('/',indexRoute);
 app.use('/lawyer',lawyerroute);
+app.use('/doc',docRoute);
+
 
 app.listen(app.get('port'),function(err) {
     if(!err)

@@ -8,8 +8,8 @@ var Passport = require('passport');
 
 router.route('/register')
 .post(function(req, res) {  
-  if(!req.body.email || !req.body.password || !req.body.phone ||!req.body.location 
-    ||!req.body.pincode ||!req.body.bhamashahid) {
+  if(!req.body.email || !req.body.password || !req.body.phone ||!req.body.location ||!req.body.pincode ||!req.body.bhamashahid) {
+        console.log(req.body.name+" "+req.body.email+" ");
     res.json({ success: false, message: 'Please fill all details.' });
   } else {
 

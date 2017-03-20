@@ -9,6 +9,9 @@
   "author": "joravar",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.18.0"
+    "moment": "^2.18.0",
+    "mongodb": "^2.2.25",
+    "mongoose-search-plugin": "^0.1.2",
+    "mongoose-text-search": "0.0.2"
   }
 }
