@@ -4,8 +4,11 @@
   "description": "documents anaylsis",
   "main": "app.js",
   "scripts": {
-   "start": "node app.js"
+    "start": "node app.js"
   },
   "author": "joravar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.18.0"
+  }
 }

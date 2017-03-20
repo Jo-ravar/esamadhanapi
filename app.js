@@ -16,7 +16,10 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(passport.initialize());
 
 var indexRoute=require('./src/routes/index');
+var lawyerroute=require('./src/routes/index2');
+
 app.use('/',indexRoute);
+app.use('/lawyer',lawyerroute);
 
 app.listen(app.get('port'),function(err) {
     if(!err)
