@@ -45,7 +45,7 @@ router.route('/register')
 router.route('/login')
 .post( function(req, res) {  
 
- User.findOne({ $or:[{  phone: req.body.phone} , {email:req.body.email}] }, function (err, user) {
+ User.findOne({email:req.body.email }, function (err, user) {
       if (err) { throw err; }
       else{
         if (!user) {  

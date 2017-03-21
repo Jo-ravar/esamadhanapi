@@ -73,7 +73,7 @@ router.route('/register')
 router.route('/login')
 .post( function(req, res) {  
 
- Lawyer.findOne({ $or:[{  phone: req.body.phone} , {email:req.body.email}] }, function (err, lawyer) {
+ Lawyer.findOne({email:req.body.email }, function (err, lawyer) {
       if (err) { throw err; }
       else{
         if (!lawyer) {  
