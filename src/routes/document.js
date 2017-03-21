@@ -3,6 +3,8 @@ var dbhelper=require('../utilities/dbhelper');
 var ObjectID=require('mongodb').ObjectID;  
 
 
+
+
 router.route('/add')
 .post(function(req,res){
     if(!req.body.name||!req.body.proce){
@@ -115,6 +117,28 @@ router.route('/search')
            res.send(data);
        }
   });
+
+});
+
+router.route('/det')
+.get(function(req,res){
+    
+        var id = req.query.id;
+        var db =dbhelper.db;
+        var collection = db.collection('Documents');
+        var objectId = new ObjectID(id);
+        collection.findOne({ _id: objectId},function(err ,data){
+             if(err)
+             {
+                 console.error(JSON.stringify(err));
+                 return res.json({ success: false, message: 'Something went wrong.'});
+             }
+             else
+             {
+                 console.log(data);
+                res.send(data);
+             }
+        }); 
 
 });
 
